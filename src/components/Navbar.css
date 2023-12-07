@@ -1,0 +1,42 @@
+/* Styles for the navbar */
+.navbar {
+  background-color: #848181;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the navigation links horizontally */
+  padding: 0;
+}
+
+.navbar .nav-links li {
+  margin: 0 10px; /* Adjust the spacing between links */
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  /* Adjust the navbar for smaller screens */
+.navbar {
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Reduce padding for better mobile usability */
+}
+
+  /* You can add more styles for the mobile navbar as needed */
+}

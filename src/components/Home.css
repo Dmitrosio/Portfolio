@@ -1,0 +1,65 @@
+/* Home.css */
+
+/* Styling for the .home class */
+.home {
+  display: flex;
+  flex-direction: column; /* Set a column layout */
+  align-items: center;
+  padding: 20px;
+  padding-top: 50px;
+  background-image: url('back.jpg');
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the background image */
+}
+
+/* Styling for the header */
+.header {
+  text-align: center;
+}
+
+/* Styling for the content wrapper */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Add some space between text and image */
+}
+
+/* Styling for the text area */
+.text {
+  flex: 1;
+}
+
+/* Styling for the image */
+.image {
+  flex: 1;
+}
+
+/* Styling for the img element within .image */
+.image img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 5%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+/* Styles for the text within .text */
+.text p {
+  font-size: 24px;
+  color: #fefbfb;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .text, .image {
+    flex: none;
+    width: 100%;
+    margin: 0; /* Reset margin for smaller screens */
+  }
+}

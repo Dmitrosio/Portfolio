@@ -1,0 +1,8 @@
+/* TVScreen.css */
+.tv-screen {
+  width: 800px;    /* Adjust the width as needed */
+  height: 300px;   /* Adjust the height as needed */
+  border: 2px solid #000; /* Add a border for the TV screen */
+  position: relative;   /* Position relative for absolute positioning inside */
+  }
+  

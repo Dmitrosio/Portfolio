@@ -1,0 +1,100 @@
+/* Split the screen into two sections */
+.split-screen {
+    display: flex; /* Use flexbox for layout */
+  }
+  
+  /* Left side of the screen */
+  .left-section {
+    flex: 1; /* Occupy 50% of the screen width */
+    background-color: #f2f2f2; /* Background color for the left section */
+    margin-top: 50px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 73.5px;
+    /* Optionally, you can make the left section fixed at a specific width if needed */
+    min-width: 20%; 
+    max-width: 50%;
+  }
+  
+  /* Right side of the screen */
+  .right-section {
+    /* Add styles for the fixed view of the right section */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%; /* Adjust the width as needed */
+    height: 100vh;
+    background-color: #e0e0e0; /* Background color for the right section */
+    margin-top: 73.5px;
+  }
+
+  .image-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .image-list li {
+    margin: 10px 0;
+    color: black;
+  }
+  
+  .image-list img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    /* Add more image styling as needed */
+    width: 300px;
+    height: 300px;
+  }
+  .gif-image{
+    width: 400px;
+    height: 100px;
+  }
+
+  @media (max-width: 768px) {
+    .split-screen {
+      flex-direction: column; /* On smaller screens, switch to a column layout */
+    }
+    
+    .left-section, .right-section {
+      width: 100%; /* Occupy full width on smaller screens */
+      position: static; /* Reset position for responsiveness */
+      max-width: 100%; /* Adjust width to fit the screen */
+      margin-top: 0; /* Reset top margin */
+    }
+    
+    .right-section {
+      position: fixed;
+      top: 0; /* Stick to the top of the viewport */
+      width: 100%; /* Occupy full width */
+      height: auto; /* Adjust height as needed */
+      max-height: 50%; /* Example: Occupy 50% of the viewport height */
+      overflow-y: auto; /* Enable vertical scrolling for the right section */
+    }
+    
+    .left-section {
+      margin-top: calc(50vh + 10px); /* Adjust the top margin to prevent overlap with the fixed right section */
+    }
+    
+    .image-list img {
+      width: 50%; /* Ensure images take the full width available */
+      height: auto; /* Maintain aspect ratio */
+      max-width: 100%; /* Adjust to fit smaller screens */
+    } 
+    
+    .image-list img:hover{
+      cursor: none;
+    }
+    .image-list li {
+      margin: 5px 0; /* Adjust margin for smaller screens */
+    }
+    
+    .gif-image {
+      width: 100%; /* Adjust gif image width for smaller screens */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    .right-section iframe{
+      width: 100%;
+    }
+  }
+  
