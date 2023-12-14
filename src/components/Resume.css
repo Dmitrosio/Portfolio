@@ -1,0 +1,30 @@
+/* Resume.css */
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This ensures the container takes the full height of the viewport */
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  iframe {
+    width: 100%; /* Set the iframe width to 100% to make it responsive */
+    height: 80vh; /* Adjust the height based on your preference */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    max-height: 600px; /* Set a maximum height for larger screens */
+    border: none;
+  }
+  
+  @media (max-width: 600px) {
+    iframe {
+      height: 50vh; /* Adjust the height for smaller screens */
+      max-width: 100%; /* Allow the iframe to take full width on smaller screens */
+      max-height: none; /* Remove maximum height for smaller screens */
+    }
+  }
