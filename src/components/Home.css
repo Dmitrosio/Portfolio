@@ -52,6 +52,57 @@
   color: #fefbfb;
 }
 
+.case {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 340px;
+  width: 60%;
+  display: flex;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  background: rgba(128, 128, 128, 0.1); /* Grey background with 80% opacity */
+  backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+
+}
+
+.case-content {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.case p, .case a {
+  color: #fff;
+  padding: 20px;
+}
+
+.case a {
+  text-decoration: none;
+  background-color: #007BFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.case img {
+  width: 400px;
+  border-radius: 5%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.prevTitle {
+  color: #fff;
+  font-size: 20px;
+}
+
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .content {
