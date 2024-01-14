@@ -35,7 +35,7 @@ const ReachMe = () => {
       setFormError(null);
   
       // Redirect to your email address (replace 'your-email@example.com' with your actual email address)
-      window.location.href = 'dimaorlov2002@gmail.com';
+      window.location.href = 'mailto:dimaorlov2002@gmail.com';
     } catch (error) {
       // Handle errors from the server or API
       setFormError('An error occurred. Please try again.');
