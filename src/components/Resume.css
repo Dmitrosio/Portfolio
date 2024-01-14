@@ -5,8 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('back.jpg');
-    background-size: cover;
+    position: relative;
+    z-index: 1;
   }
   
   .resume h1 {

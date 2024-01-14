@@ -37,6 +37,14 @@
     margin: 10px 0;
     color: #fff;
   }
+
+  a:hover{
+    color: antiquewhite;
+  }
+
+  a{
+    color:#b3b6b8;
+  }
   
   @media (max-width: 768px) {
     .menu {

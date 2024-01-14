@@ -1,6 +1,8 @@
 /* Split the screen into two sections */
 .split-screen {
     display: flex; /* Use flexbox for layout */
+    z-index: 1;
+    position: relative;
   }
   
   /* Left side of the screen */
@@ -10,8 +12,6 @@
     overflow-y: auto; /* Enable vertical scrolling */
     min-width: 20%; 
     max-width: 50%;
-    background-image: url('back.jpg');
-    background-size: cover;
   }
   
   /* Right side of the screen */
@@ -23,7 +23,6 @@
     width: 50%; /* Adjust the width as needed */
     height: 100vh;
     margin-top: 41px;
-    background-image: url('back.jpg');
     color: #fff;
   }
 

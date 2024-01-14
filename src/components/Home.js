@@ -8,7 +8,7 @@ import reachPrev from './reachPrev.png';
 
 export default function Home() {
   return (
-      <div className="home">
+      <div className="home">   
         <div className='header'>
           <h1>Dmitrii Orlov</h1>
           <h2>Software Engineer and Developer</h2>

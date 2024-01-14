@@ -6,8 +6,8 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('back.jpg');
-    background-size: cover;
+    position: relative;
+    z-index: 1;
   }
   
   h1 {
@@ -21,7 +21,7 @@
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #858282;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   

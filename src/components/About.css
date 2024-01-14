@@ -1,11 +1,11 @@
 .about-me {
-    background-image: url('back.jpg');
-    background-size: cover;
+    z-index: 1;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 60px;
     display: flex;
     flex-direction: row;
+    position: relative;
   }
   
 .image-holder{
