@@ -46,7 +46,21 @@ const ReachMe = () => {
   return (
     <div class="reach">
       <form onSubmit={handleSubmit}>
-        {/* Your form inputs here */}
+        <label>
+          Name:
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Email:
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Message:
+          <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
+        </label>
+        <br />
         <button type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
