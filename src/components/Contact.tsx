@@ -64,7 +64,7 @@ export default function App() {
           clipPath: "inset(10% 50% 90% 50% round 10px)"
         }}
       >
-        <li><FaPhone /> (612) 5174358</li>
+        <li><FaPhone /> (612)-517-4358</li>
         <li><FaEnvelope /> dimaorlov2002@gmail.com</li>
         <li> <a href="https://www.linkedin.com/in/dmitrii-orlov-53b903240/">
             <FaLinkedin /> LinkedIn Profile

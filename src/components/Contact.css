@@ -1,5 +1,4 @@
 /* Contact.css */
-
 .menu {
     /* Your menu styles here */
     /* Example styles: */
@@ -9,7 +8,6 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
   }
   
   button {
@@ -47,8 +45,13 @@
     }
   
     button {
-      width: 80px; /* Reduce button width for smaller screens */
+      width: 100px; /* Reduce button width for smaller screens */
       padding: 8px 16px; /* Adjust button padding */
+      
+    }
+
+    ul{
+      display: list-item;
     }
     /* Add any additional adjustments for smaller screens */
 }

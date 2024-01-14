@@ -1,17 +1,65 @@
 .about-me {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    text-align: center;
+    background-image: url('back.jpg');
+    background-size: cover;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
   }
   
-.about-me h2 {
+.image-holder{
+    height: 100%; /* Maintain aspect ratio */
+    width: 100%;
+    margin-bottom: 20px; /* Add margin for spacing between image and text */
+    display: flex;
+    flex-direction: row;
+}
+
+.image-holder img{
+    width: 70%;
+    margin-left: auto;
+}
+.about-me-text{
     font-size: 24px;
-    color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+.about-me-text h2{
+    text-align: center;
 }
+.about-me-text p {
+    margin: auto;
+    width: 70%;
+    padding-bottom: 50px;
+}
+
+.about-me-text img{
+    width: 50%;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .about-me{
+        display: flex;
+        flex-direction: column;
+    }
+    .image-holder img{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
   
-.about-me p {
-    font-size: 16px;
-    color: #666;
-}
+    .about-me-text {
+        margin: auto;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .about-me-text img{
+        margin: auto;
+        width: 100%;
+    }
+  }

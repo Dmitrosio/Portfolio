@@ -4,31 +4,17 @@
 .home {
   display: flex;
   flex-direction: column; /* Set a column layout */
-  align-items: center;
   padding: 20px;
   padding-top: 50px;
   background-image: url('back.jpg');
   background-size: cover; /* Ensure the image covers the entire container */
   background-position: center; /* Center the background image */
+  
 }
 
-/* Styling for the header */
-.header {
-  text-align: center;
-}
-
-/* Styling for the content wrapper */
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px; /* Add some space between text and image */
-}
-
-/* Styling for the text area */
-.text {
-  flex: 1;
+.header, .header h1{
+  color: #fff;
+  margin-right: auto;
 }
 
 /* Styling for the image */
@@ -46,28 +32,20 @@
   margin-top: 20px;
 }
 
-/* Styles for the text within .text */
-.text p {
-  font-size: 24px;
-  color: #fefbfb;
-}
-
 .case {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  height: 340px;
+  height: 100%;
   width: 60%;
   display: flex;
   margin-left: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
   padding-top: 20px;
+  margin-bottom: 50px;
   padding-right: 50px;
   padding-bottom: 20px;
   background: rgba(128, 128, 128, 0.1); /* Grey background with 80% opacity */
   backdrop-filter: blur(5px); /* Apply a blur effect to the background */
-
 }
 
 .case-content {
@@ -81,9 +59,13 @@
   padding: 20px;
 }
 
+.case p{
+  font-size: 20px;
+}
+
 .case a {
   text-decoration: none;
-  background-color: #007BFF;
+  background-color: #666b70;
   padding: 10px 20px;
   border-radius: 5px;
   margin-top: 10px;
@@ -99,18 +81,19 @@
 
 .prevTitle {
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
 }
 
-
-/* Media query for smaller screens */
 @media (max-width: 768px) {
-  .content {
-    flex-direction: column;
+  .case {
+    width: 80%;
+    height: 40%;
   }
-  .text, .image {
-    flex: none;
+
+  .case p{
     width: 100%;
-    margin: 0; /* Reset margin for smaller screens */
   }
+  .case img {
+    display: none;
+}
 }

@@ -5,13 +5,11 @@ import GIF from './load.gif';
 const RightSection = ({ videoUrl, showGif }) => {
   return (
     <div className="right-section">
-      <p>This is the content on the right side of the screen.</p>
             {showGif ? (
         <img src={GIF} alt="GIF" className='gif-image'/>
       ) : (
         videoUrl && (
           <div>
-            <h2>Watch the Video</h2>
             <iframe
               width="560"
               height="400"

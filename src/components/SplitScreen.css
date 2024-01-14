@@ -6,13 +6,12 @@
   /* Left side of the screen */
   .left-section {
     flex: 1; /* Occupy 50% of the screen width */
-    background-color: #f2f2f2; /* Background color for the left section */
-    margin-top: 50px;
+    margin-top: 40px;
     overflow-y: auto; /* Enable vertical scrolling */
-    margin-top: 73.5px;
-    /* Optionally, you can make the left section fixed at a specific width if needed */
     min-width: 20%; 
     max-width: 50%;
+    background-image: url('back.jpg');
+    background-size: cover;
   }
   
   /* Right side of the screen */
@@ -23,8 +22,13 @@
     right: 0;
     width: 50%; /* Adjust the width as needed */
     height: 100vh;
-    background-color: #e0e0e0; /* Background color for the right section */
-    margin-top: 73.5px;
+    margin-top: 41px;
+    background-image: url('back.jpg');
+    color: #fff;
+  }
+
+  iframe{
+    padding-top: 40px;
   }
 
   .image-list {
@@ -34,7 +38,8 @@
   
   .image-list li {
     margin: 10px 0;
-    color: black;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
   }
   
   .image-list img {
@@ -48,6 +53,8 @@
   .gif-image{
     width: 400px;
     height: 100px;
+    padding-top: 50px;
+    align-items: center;
   }
 
   @media (max-width: 768px) {
@@ -64,21 +71,21 @@
     
     .right-section {
       position: fixed;
-      top: 0; /* Stick to the top of the viewport */
+      padding-top:40px;
       width: 100%; /* Occupy full width */
-      height: auto; /* Adjust height as needed */
+      height: 50vh; /* Adjust height as needed */
       max-height: 50%; /* Example: Occupy 50% of the viewport height */
-      overflow-y: auto; /* Enable vertical scrolling for the right section */
     }
     
     .left-section {
-      margin-top: calc(50vh + 10px); /* Adjust the top margin to prevent overlap with the fixed right section */
+      margin-top: 50vh; /* Adjust the top margin to prevent overlap with the fixed right section */
     }
     
     .image-list img {
-      width: 50%; /* Ensure images take the full width available */
+      margin-top:80px;
+      width: 40%; /* Ensure images take the full width available */
       height: auto; /* Maintain aspect ratio */
-      max-width: 100%; /* Adjust to fit smaller screens */
+      max-height: 50%; /* Adjust to fit smaller screens */
     } 
     
     .image-list img:hover{
@@ -90,11 +97,12 @@
     
     .gif-image {
       width: 100%; /* Adjust gif image width for smaller screens */
-      height: auto; /* Maintain aspect ratio */
+      height:100%;
     }
 
     .right-section iframe{
       width: 100%;
+      height: 50vh;
     }
   }
   
