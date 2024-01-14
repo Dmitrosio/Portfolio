@@ -1,6 +1,3 @@
-// Install nodemailer in your Netlify functions directory:
-// npm install nodemailer
-
 const nodemailer = require('nodemailer');
 
 exports.handler = async (event) => {
@@ -21,6 +18,7 @@ exports.handler = async (event) => {
       pass: process.env.EMAIL_PASS,
     },
   });
+  
 
   // Set up email content
   const mailOptions = {
