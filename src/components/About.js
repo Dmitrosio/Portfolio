@@ -21,7 +21,7 @@ export default function About() {
                     </p>
                     <img src={class_pic} alt="oops"></img>
                     <h2>My Hobbies</h2>
-                    <p>Recently I have purchased a 1982 Yamaha Virago 500 for parts. It was a random thing that I have never thought of but I have decied to get my first bike and build it from scratch. Picture below is a finished motorcycle but I will get there too!</p>
+                    <p>Recently I have purchased a 1982 Yamaha Virago 500 for parts. It was a random thing that I have never thought of but I have decided to get my first bike and build it from scratch. Picture below is a finished motorcycle but I will get there too!</p>
                     <img src={bike} alt="oops"></img>
                     <p></p>
                 </div>

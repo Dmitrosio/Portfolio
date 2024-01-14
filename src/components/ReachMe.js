@@ -65,7 +65,7 @@ const ReachMe = () => {
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
         {formError && <p className="error-message">{formError}</p>}
-        {submissionSuccess && <p className="success-message">Form submitted successfully!</p>}
+        {submissionSuccess && <p className="success-message">Thank you, form submitted successfully! I will reach back to you shortly!</p>}
       </form>
     </div>
   );
