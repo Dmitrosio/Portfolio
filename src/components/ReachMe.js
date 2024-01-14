@@ -14,25 +14,28 @@ const ReachMe = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (!name || !email || !message) {
       setFormError('Please fill out all fields.');
       return;
     }
-
+  
     setIsSubmitting(true);
-
+  
     try {
       const response = await axios.post('/.netlify/functions/submitForm', { name, email, message });
-
+  
       // Simulating a successful submission
       setSubmissionSuccess(true);
-
+  
       // Reset form fields and state after successful submission
       setName('');
       setEmail('');
       setMessage('');
       setFormError(null);
+  
+      // Redirect to your email address (replace 'your-email@example.com' with your actual email address)
+      window.location.href = 'dimaorlov2002@gmail.com';
     } catch (error) {
       // Handle errors from the server or API
       setFormError('An error occurred. Please try again.');
@@ -40,7 +43,6 @@ const ReachMe = () => {
       // Reset loading state
       setIsSubmitting(false);
     }
-
   };
 
   return (
@@ -65,6 +67,11 @@ const ReachMe = () => {
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
         {formError && <p className="error-message">{formError}</p>}
+        {submissionSuccess && (
+        <p className="success-message">
+          Form submitted successfully! We will get in touch with you shortly.
+        </p>
+)}
     </form>
     </div>
   );
