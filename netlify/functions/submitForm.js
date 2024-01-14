@@ -22,8 +22,8 @@ exports.handler = async (event) => {
 
   // Set up email content
   const mailOptions = {
-    from: 'your-email@gmail.com',
-    to: 'your-email@gmail.com',
+    from: 'your-gmail-account@gmail.com',
+    to: process.env.EMAIL_USER,
     subject: 'New Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };

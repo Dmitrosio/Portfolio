@@ -14,28 +14,26 @@ const ReachMe = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (!name || !email || !message) {
       setFormError('Please fill out all fields.');
       return;
     }
-  
+
     setIsSubmitting(true);
-  
+
     try {
       const response = await axios.post('/.netlify/functions/submitForm', { name, email, message });
-  
+
       // Simulating a successful submission
       setSubmissionSuccess(true);
-  
+
       // Reset form fields and state after successful submission
       setName('');
       setEmail('');
       setMessage('');
       setFormError(null);
-  
-      // Redirect to your email address (replace 'your-email@example.com' with your actual email address)
-      window.location.href = 'mailto:dimaorlov2002@gmail.com';
+
     } catch (error) {
       // Handle errors from the server or API
       setFormError('An error occurred. Please try again.');
@@ -46,28 +44,15 @@ const ReachMe = () => {
   };
 
   return (
-    <div class = 'reach'>
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </label>
-      <br />
-      <label>
-        Message:
-        <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
-      </label>
-      <br />
-      <button type="submit" disabled={isSubmitting}>
+    <div class="reach">
+      <form onSubmit={handleSubmit}>
+        {/* Your form inputs here */}
+        <button type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
         {formError && <p className="error-message">{formError}</p>}
-    </form>
+        {submissionSuccess && <p className="success-message">Form submitted successfully!</p>}
+      </form>
     </div>
   );
 };
