@@ -1,3 +1,8 @@
+// Install nodemailer in your Netlify functions directory:
+// npm install nodemailer
+
+const nodemailer = require('nodemailer');
+
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
@@ -6,28 +11,35 @@ exports.handler = async (event) => {
     };
   }
 
+  const { name, email, message } = JSON.parse(event.body);
+
+  // Set up nodemailer transporter (replace with your email provider's details)
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  // Set up email content
+  const mailOptions = {
+    from: 'your-email@gmail.com',
+    to: 'your-email@gmail.com',
+    subject: 'New Form Submission',
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+  };
+
   try {
-    const { name, email, message } = JSON.parse(event.body);
-
-    // Check for required fields
-    if (!name || !email || !message) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ error: 'Missing required fields' }),
-      };
-    }
-
-    // Perform any logic you need with the form data
-    // For simplicity, let's just log the data
-    console.log('Form submitted:', { name, email, message });
+    // Send the email
+    await transporter.sendMail(mailOptions);
 
     return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Form submitted successfully!' }),
     };
   } catch (error) {
-    console.error('Error processing form submission:', error);
-
+    console.error('Error sending email:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: 'Internal Server Error' }),
