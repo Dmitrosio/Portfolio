@@ -2,6 +2,7 @@ import React from 'react';
 import CD1 from './CD-1.jpg';
 import CD2 from './CD-2.jpg';
 import CD3 from './CD-3.jpg';
+import CD4 from './CD-4.jpg';
 import GIF from './load.gif';
 import {
   motion,
@@ -22,6 +23,7 @@ const LeftSection = ({ playVideo, showGif, setShowGif }) => {
   };
 
   const imageUrls = [
+    { imageUrl: CD4, videoUrl: 'https://www.youtube.com/embed/WYpwrA3ZAhM?si=aAWeZacflFBfH_Ci', title: "AI Assistant", description: "This is an AI assistant I have created working for Grab The Axe: Total Security Solutions. I have used React Native, Whisper API and Chat GPT3 locally. "},
     { imageUrl: CD1, videoUrl: 'https://www.youtube.com/embed/D0uWxfvvEPo?si=0H7brsmpSY6h9JsD', title: "To Do List Application", description: "This application creates a To Do List in applicaiton using Java."  },
     { imageUrl: CD2, videoUrl: 'https://www.youtube.com/embed/KcRdAAi4cSA?si=s2ykhYH4mfTfwNPy', title: "Poker Hand Classification", description: "This application creates an AI model that creates description of what's going on on the screen."},  
     { imageUrl: CD3, videoUrl: 'https://www.youtube.com/embed/2yWSaMkhvzA?si=KQiMnuz0sINwqN3U', title: "Image Caption CNN", description: "This applicaiton classifies the hand of the chosen cards. "},
