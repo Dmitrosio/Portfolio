@@ -2,7 +2,7 @@ import React from 'react';
 import CD1 from './CD-1.jpg';
 import CD2 from './CD-2.jpg';
 import CD3 from './CD-3.jpg';
-import CD4 from './CD-4.jpg';
+import CD4 from './CD-4.png';
 import GIF from './load.gif';
 import {
   motion,
